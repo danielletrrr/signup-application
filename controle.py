@@ -2,6 +2,7 @@ import flet as ft
 from flet import Checkbox, Column, ElevatedButton, Row, Text, TextField
 from flet_core.control_event import ControlEvent
 
+
 def main(page: ft.Page) -> None:
     # Configurações da página
     page.title = 'Cadastro'
@@ -20,7 +21,7 @@ def main(page: ft.Page) -> None:
     # Função para validar preenchimento dos campos
     def validate(e: ControlEvent) -> None: 
         """Valida se todos os campos foram preenchidos corretamente."""
-        if all([text_username.value, text_password.value, Checkbox.value]):
+        if all([text_username.value, text_password.value, Checkbox_signup.value]):
             button_submit.disabled = False
         else: 
             button_submit.disabled = True 
